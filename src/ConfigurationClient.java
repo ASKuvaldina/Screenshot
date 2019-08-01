@@ -24,7 +24,7 @@ public class ConfigurationClient {
                     .files()
                     .uploadBuilder("/" + dateFormat.format(new Date()) + ".png")
                     .uploadAndFinish(in);
-        } catch (IOException e) {
+        } catch (IOException e) { //почему ловит не DbxException, а все?
             e.printStackTrace();
         }
     }
